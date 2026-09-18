@@ -47,23 +47,29 @@
   <div class="aside-contact"><p>A question about your privacy?</p><a href="mailto:photoboothpro@outlook.com">Get in touch &rarr;</a></div>
 </aside>
 <article class="document" aria-label="Privacy policy">
-<p class="updated"><strong>Last updated: 7 September 2026</strong></p>
+<p class="updated"><strong>Last updated: 17 September 2026</strong></p>
 <p>Photo Booth Pro turns your phone, tablet or PC into a photo booth. This policy
 describes exactly what the app does with information, in the order that
 matters: your pictures first, then everything else.</p>
 <p>It describes the app's real behaviour rather than a general template. Where a
 statement is enforced by the way the app is built rather than by a promise, it
 says so.</p>
+<p><strong>Platform differences matter.</strong> This is a shared policy for iPhone,
+iPad, Android and Windows. Platform-specific statements below apply only to the
+named versions. Android details cover Photo Booth Pro v1
+(<strong>com.giotto.photoboothpro</strong>); Apple SDK descriptions do not describe
+the Android or Windows implementation.</p>
 <hr>
 <h2 id="1-your-photos-videos-and-strips">1. Your photos, videos and strips</h2>
-<p><strong>They stay on your device.</strong> Photo Booth Pro has no account, no server and no
-upload. Captures are written to your device's storage and, if you allow it, to
-your device's photo library.</p>
+<p><strong>The app does not upload your captures to us.</strong> Photo Booth Pro has
+no account or media-upload service. Captures are written to your device's storage.
+On Android, they are saved through <strong>MediaStore to the shared gallery</strong>,
+not just the app's private storage. Diagnostics are a separate online service,
+described below.</p>
 <p>We never receive them. There is no mechanism in the app by which we could: no
 image, no frame, no thumbnail, no filename and no derived data such as a face
 print or an embedding is ever sent anywhere by the app.</p>
-<p>Pictures leave your device only when <strong>you</strong> send them, using a control you
-tapped:</p>
+<p>You can send pictures using:</p>
 <ul>
 <li>your device's share menu (messaging apps, email, or any app you choose),</li>
 <li>saving to your photo library,</li>
@@ -71,6 +77,8 @@ tapped:</p>
 </ul>
 <p>In each case the picture goes where you sent it, and what happens to it there
 is governed by that service, not by us.</p>
+<p>Your device's gallery or backup provider may also sync saved pictures if you
+have enabled that service. Those settings are separate from Photo Booth Pro.</p>
 <h2 id="2-camera-and-microphone">2. Camera and microphone</h2>
 <p>The camera is used to show the live preview and take the picture. The
 microphone is used only while recording a video clip, and only if you have
@@ -84,63 +92,106 @@ withdraw either at any time in your device's system settings; the app
 continues to work with whatever you allow, and tells you plainly what it
 cannot do.</p>
 <h2 id="3-photos-library">3. Photo library</h2>
-<p>If you allow access, the app saves captures to an album and shows your saved
+<p><strong>iPhone and iPad:</strong> If you allow access, the app saves captures to an album and shows your saved
 captures in its own gallery. It reads only what it needs to show that gallery.</p>
 <p>If you choose limited access, the app works with the photos you selected
 and says so rather than showing an empty gallery that looks like data loss.
 If you decline, captures stay inside the app.</p>
+<p><strong>Android:</strong> Captures are saved to the shared Photo Booth Pro album
+(or the album you choose) through MediaStore. Media read permissions support the
+in-app Gallery; the system photo picker lets you choose existing pictures for a
+strip. Declining read access does not turn saving into private, app-only storage.
+Shared captures remain after uninstalling; delete them in your gallery if you
+want them removed.</p>
 <h2 id="4-face-detection">4. Face detection</h2>
-<p>Some features detect that a face is present and where it is — for framing
+<p><strong>iPhone and iPad:</strong> Some features detect that a face is present and where it is — for framing
 guides and for looks that need to know where a face is. This runs entirely on
-the device using your platform's on-device machine-learning frameworks. No
+the device using Apple's on-device frameworks. No
 face data is stored, matched against anything, or transmitted. The app does
 not identify anyone and cannot tell one guest from another.</p>
+<p><strong>Android:</strong> The app does no face detection or recognition and
+computes no face data. Its effects are image filters applied to the frame.</p>
 <h2 id="5-diagnostics-and-usage-analytics">5. Diagnostics and usage analytics</h2>
 <p>This is the one place the app sends anything, and it is the reason this policy
 cannot say "nothing leaves your device".</p>
 <h3 id="what-is-sent">What is sent</h3>
-<p>The app uses <strong>Google Firebase Analytics</strong>. Firebase automatically collects,
+<p><strong>iPhone and iPad:</strong> The app uses <strong>Google Firebase Analytics</strong>. Firebase automatically collects,
 whether or not the app records anything of its own:</p>
 <ul>
-<li>an app-instance identifier (a random identifier for the installation, not for
-  you, and reset if you delete the app),</li>
+<li>an app-instance identifier (a random identifier for the installation, not an
+  account name; resetting it does not erase previously collected records),</li>
 <li>device model and operating-system version,</li>
 <li>language and region,</li>
 <li>an approximate location derived from your IP address, no more precise than a
   region,</li>
 <li>session counts and durations.</li>
 </ul>
-<p>In addition, the app records a small, fixed vocabulary of product events — such
+<p>On iPhone and iPad, the app also records a small, fixed vocabulary of product events — such
 as "the app was opened", "a photo was captured", "a filter was applied",
 "a purchase screen was shown" — with parameters such as which capture mode was
 used, how many photos were in a strip, and how long a launch took.</p>
+<h3 id="android-diagnostics">Android: Firebase diagnostics and analytics</h3>
+<p>The Android app uses <strong>Firebase Crashlytics</strong> and
+<strong>Google Analytics for Firebase</strong> to find crashes, diagnose failures
+and understand feature usage. Both are <strong>on by default</strong>. This is
+installation-level collection, not just aggregate counts or built-in Android
+crash reporting.</p>
+<p>When enabled, these services collect:</p>
+<ul>
+<li>crash logs, error reports and stack traces;</li>
+<li>diagnostics such as device model, Android and app versions, available memory
+  and storage, app state and runtime information;</li>
+<li>app interactions, such as screens and features used, capture modes and sessions;</li>
+<li>installation identifiers, including the Analytics app-instance ID, Firebase
+  installation ID and Crashlytics installation identifier;</li>
+<li>approximate location, such as country or city, derived by Analytics from the
+  device's IP address.</li>
+</ul>
+<p>These identifiers are not your name or email, but they can link reports and
+events from an installation. We do not describe this data as anonymous. Android
+does not request location permission or collect GPS location.</p>
 <h3 id="what-is-never-sent">What is never sent</h3>
-<p>No photo, video, frame, thumbnail, filename, face data or text you typed.</p>
-<p>This is structural rather than a promise. Every event the app can record is
+<p>No photo, video, audio, camera frame, thumbnail, media filename, face data,
+guest caption or album name is included in diagnostics or analytics.</p>
+<p>On iPhone, iPad and Android, the app's own usage events are
 drawn from a fixed list of event names and a fixed list of parameter names,
 each of which can hold only a preset value, a whole number or a true/false
 flag. There is no case in that vocabulary capable of carrying free-form content
 about a guest or a picture. A reviewer can verify that by reading one file
 rather than every call site.</p>
 <h3 id="turning-it-off">Turning it off</h3>
-<p><strong>Settings ▸ Privacy ▸ Share diagnostics.</strong> Switching it off stops both the
+<p><strong>iPhone and iPad: Settings ▸ Privacy ▸ Share diagnostics.</strong> Switching it off stops both the
 app's own events and Firebase's automatic collection, not merely the first.
 The setting is read before every single event, so turning it off takes effect
 immediately rather than at the next launch.</p>
+<p><strong>Android:</strong> The same <strong>Settings ▸ Privacy ▸ Share
+diagnostics</strong> switch disables both Crashlytics and Analytics collection.
+The choice persists. Opting out stops future collection; it does not itself
+erase reports or events already received. See
+<a href="#9-retention-and-deletion">retention and deletion</a>.</p>
+<p><strong>Windows:</strong> SDK names and in-app collection controls described
+here for Apple and Android should not be assumed to apply to Windows. Contact
+us with your Windows app version for platform-specific clarification.</p>
 <h3 id="who-else-is-involved">Who else is involved</h3>
 <p>Google acts as a data processor for this information. Its handling is described
 at <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a> and
 <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
 <p>We do not sell this information, do not share it with advertisers, and the app
-contains no advertising SDK and no cross-app tracking. The app does not ask for
+contains no advertising SDK and no cross-app tracking. <strong>On iPhone and iPad,</strong> the app does not ask for
 App Tracking Transparency permission because it does not track you across other
 companies' apps and websites.</p>
+<p><strong>Android:</strong> There are no ads, and the app does not read the
+advertising ID. Advertising-ID and Android AdServices permissions are removed
+from the app's manifest.</p>
 <h2 id="6-crash-and-performance-reports">6. Crash and performance reports</h2>
-<p>The app uses your platform's built-in crash and performance reporting (such as
-Apple's MetricKit, or the equivalent on Android and Windows), which delivers a
-periodic on-device summary of launch times, hangs and crashes. The app records
+<p><strong>iPhone and iPad:</strong> The app uses Apple's <strong>MetricKit</strong>,
+which delivers a periodic on-device summary of launch times, hangs and crashes. The app records
 only aggregate numbers from it — for example an average launch time in
 milliseconds — and does so through the same Share diagnostics switch above.</p>
+<p><strong>Android:</strong> Firebase Crashlytics sends the crash logs, stack
+traces, installation identifiers and diagnostic context described in section 5.
+It is not a MetricKit equivalent that sends only aggregate numbers. Its in-app
+opt-out is separate from Android's system diagnostic-sharing settings.</p>
 <p>Separately, your platform may send crash reports to us if <strong>you</strong> have opted
 into diagnostic sharing in your device's own settings (for example, Share
 iPhone Analytics on Apple devices, Usage &amp; diagnostics on Android, or
@@ -148,10 +199,12 @@ Diagnostic data on Windows). That is your platform's collection under your
 platform's consent, not ours, and you can change it in your device's privacy
 settings.</p>
 <h2 id="7-purchases">7. Purchases</h2>
-<p>Purchases and subscriptions are handled entirely by the app store you bought
-from (Apple, Google, or Microsoft). We never see your name, payment card,
+<p><strong>Android v1:</strong> All features are unlocked. There are no in-app
+purchases, subscriptions or event passes.</p>
+<p><strong>Where purchases are offered on other platforms,</strong> they are
+handled by the app store you bought from (Apple or Microsoft). We never see your name, payment card,
 billing address or store account.</p>
-<p>The app receives from the store only what it needs to unlock what you bought:
+<p><strong>iPhone and iPad:</strong> The app receives from the store only what it needs to unlock what you bought:
 which products are active and, for the 48-hour event pass, when the purchase
 was made. That is stored on your device and synced by the store across your
 devices in the ordinary way.</p>
@@ -162,23 +215,35 @@ user-to-user features and no advertising.</p>
 <h2 id="9-retention-and-deletion">9. Retention and deletion</h2>
 <ul>
 <li>Pictures: kept until you delete them, in your photo library or in the app.
-  Deleting the app removes anything still held inside it.</li>
-<li>Analytics: retained by Firebase for a bounded period under the project's
-  retention setting, keyed to an app-instance identifier that is discarded when
-  you delete the app.</li>
-<li>Nothing is kept about you, because nothing identifies you.</li>
+  Uninstalling does not delete Android's shared MediaStore captures, other
+  photo-library copies or copies held by a backup or sharing service.</li>
+<li>App settings and private app data: removed when you clear app data or
+  uninstall, subject to your platform's backup and restore settings.</li>
+<li>Apple and Android Firebase data: held by Google on our behalf under the applicable
+  Firebase service and project retention settings. Identifiers can link reports
+  to an installation even though we do not have an account or name for it.</li>
 </ul>
-<p>Deleting the app is therefore a complete deletion: the identifier the analytics
-were keyed to no longer exists, and reinstalling produces a new one. The app
-does not display that identifier, and we do not ask you for it, because it is
-not something you should have to know.</p>
+<p><strong>Uninstalling, clearing app data or turning off diagnostics does not
+delete diagnostics already held on servers.</strong> Resetting a local identifier
+does not erase older records keyed to it.</p>
+<p>To request deletion of collected diagnostics, email
+<a href="mailto:photoboothpro@outlook.com">photoboothpro@outlook.com</a>.
+Tell us your platform, app version and the approximate period concerned.
+Reports are keyed to installation identifiers, not email addresses, so your
+email alone may not let us locate them. We will explain what can be identified
+and deleted, whether additional information is needed, and any technical or
+retention limits. We cannot promise to locate every record or erase it solely
+from an email address. Do not send photos, passwords or other sensitive content
+with your request.</p>
 <h2 id="10-your-rights">10. Your rights</h2>
 <p>Depending on where you live you may have rights to access, correct, delete or
-restrict the use of personal information, and to object to it. Because we hold
-nothing that identifies you, there is nothing to look up: the practical
-exercise of these rights is the Share diagnostics switch, and deleting the app,
-which discards the identifier entirely. If you want something explained or
-confirmed, write to us and we will answer.</p>
+restrict the use of personal information, and to object to it. Write to
+<a href="mailto:photoboothpro@outlook.com">photoboothpro@outlook.com</a> to
+exercise these rights or ask about our handling of data. We will respond and
+explain any information needed to handle the request, including the
+identifier-matching limits in section 9. Support email itself includes your
+email address and whatever information you choose to send us; do not include
+guest media unless you intend to share it for support.</p>
 <h2 id="11-changes-to-this-policy">11. Changes to this policy</h2>
 <p>If this changes materially, the version in the app's support page will be
 updated and the date at the top will change. Material changes to what is
@@ -195,7 +260,7 @@ Windows.</em></p>
 <footer class="site-footer">
   <div class="shell footer-inner">
     <p>Photo Booth Pro &middot; Your memories, your choice.</p>
-    <div class="footer-links"><a href="support.html">Support</a><a href="mailto:photoboothpro@outlook.com">Email us</a><a href="#top">Back to top &uarr;</a></div>
+    <div class="footer-links"><a href="support.html">Support</a><a href="terms.html">Android terms</a><a href="mailto:photoboothpro@outlook.com">Email us</a><a href="#top">Back to top &uarr;</a></div>
   </div>
 </footer>
 </body>

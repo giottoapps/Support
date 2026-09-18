@@ -45,16 +45,19 @@
   <div class="aside-contact"><p>Can't find what you need?</p><a href="mailto:photoboothpro@outlook.com">Email support &rarr;</a></div>
 </aside>
 <article class="document support-document" aria-label="Support guide">
-<p><strong>One app, every device.</strong> Photo Booth Pro turns the phone, tablet or PC you
+<p><strong>Photo Booth Pro on your device.</strong> Photo Booth Pro turns the phone, tablet or PC you
 already own into a photo booth: live filters you can see before you shoot,
 four-shot strips, boomerangs and video, printed or shared on the spot.</p>
 <p>If something here does not answer your question, write to us — the address is
 at the bottom, and a real person reads it.</p>
+<p>This help center serves <strong>iPhone, iPad, Android and Windows</strong>.
+Features and settings differ by platform and version; Apple-specific instructions
+are not a promise of identical Android or Windows behavior.</p>
 <hr>
 <h2 id="the-question-everyone-asks-mirroring">The question everyone asks: mirroring</h2>
 <p><strong>Why does my saved photo look flipped compared to the preview?</strong></p>
 <p>Because it is, on purpose, and you can change it.</p>
-<p>The preview is always mirrored, like every phone camera and like a real mirror,
+<p>On iPhone, iPad and Android, the front-camera preview is mirrored, like a real mirror,
 so that when you tilt your head left the image tilts left and you can actually
 pose. What gets <strong>saved</strong> is a separate choice:</p>
 <p><strong>Settings ▸ Capture ▸ Mirror Front Camera</strong></p>
@@ -67,17 +70,24 @@ pose. What gets <strong>saved</strong> is a separate choice:</p>
 <hr>
 <h2 id="getting-started">Getting started</h2>
 <p class="question"><strong>Where do my photos go?</strong>
-To your device's photo library, in an album named in <strong>Settings ▸ Photos ▸ Album</strong>, and
-to the app's own Gallery tab. Nothing is uploaded anywhere.</p>
+<strong>iPhone and iPad:</strong> To your Photos library, in an album named in
+<strong>Settings ▸ Photos ▸ Album</strong>, and to the app's own Gallery tab.</p>
+<p><strong>Android:</strong> Captures are saved through MediaStore to your shared
+gallery, in the Photo Booth Pro album or the album you choose. They also appear
+in the app's Gallery. The app does not upload captures; your gallery's own
+backup settings are separate. Uninstalling does not remove these shared
+captures — delete them in your gallery if you want them gone.</p>
 <p class="question"><strong>How do I take a strip?</strong>
 Choose <strong>Strip</strong> on the mode selector. The booth takes four photos with a
 countdown between them, then opens the strip builder, where you can change the
 layout, the styling and which photos are used.</p>
 <p class="question"><strong>Can I build a strip from photos I already have?</strong>
-Yes — in the Gallery, select up to four photos and choose <strong>Build strip</strong>, or
+<strong>iPhone and iPad:</strong> In the Gallery, select up to four photos and choose <strong>Build strip</strong>, or
 import from your library in the strip builder.</p>
+<p><strong>Android:</strong> In Gallery, select four captures and choose
+<strong>Make a strip</strong>, or use the system photo picker in Strip Studio.</p>
 <p class="question"><strong>How long can a video be?</strong>
-Up to five minutes. Recording also stops early if storage runs low or the
+<strong>iPhone and iPad:</strong> Up to five minutes. Recording also stops early if storage runs low or the
 device gets too warm, and the clip is kept either way rather than discarded.</p>
 <p class="question"><strong>What is Boomerang?</strong>
 A short clip that plays forward and then backward. <strong>Settings ▸ Capture ▸
@@ -104,27 +114,53 @@ on the capture through the same pipeline.</p>
   allowed, because a silent clip is almost always a mistake rather than a
   choice. If you want video without sound, decline the microphone in the
   system settings.</li>
-<li><strong>Photo library</strong> — needed to save captures to an album and to show your
+<li><strong>Photo library on iPhone and iPad</strong> — needed to save captures to an album and to show your
   saved captures in the Gallery. Decline and captures stay inside the app.</li>
+<li><strong>Media access on Android</strong> — supports reading captures in Gallery.
+  Saving uses shared MediaStore storage, not an app-private fallback. The
+  system photo picker lets you choose existing pictures without granting broad
+  library access.</li>
 </ul>
 <p class="question"><strong>I said no and changed my mind.</strong>
 Open your device's system settings, find Photo Booth Pro, and switch the
 permission on. The app picks it up when you come back.</p>
+<p><strong>Android:</strong> Use <strong>Settings ▸ Apps ▸ Photo Booth Pro ▸
+Permissions</strong>. If Android no longer shows the permission prompt after
+repeated refusals, use the app's <strong>Open settings</strong> button.</p>
 <p class="question"><strong>My Gallery is empty and I know I took photos.</strong>
-Usually this is limited photo library access: the app can only see the photos
+<strong>iPhone and iPad:</strong> Usually this is limited photo library access: the app can only see the photos
 you picked. The Gallery says so when that is the case. Grant full access in
 your device's system settings, or tap the prompt in the Gallery to select
 more.</p>
+<p><strong>Android:</strong> Check media permissions and the selected album.
+Check your device's gallery as well: saved shared captures can remain there
+even if the app cannot currently read them.</p>
+<p class="question"><strong>Does Android use the internet?</strong>
+Yes. Firebase Crashlytics and Analytics send diagnostics and usage events by
+default, not your pictures or recordings. To opt out, turn off
+<strong>Settings ▸ Privacy ▸ Share diagnostics</strong>. Capture and local editing
+do not need an online account. See the <a href="privacy.html">privacy policy</a>
+for the collected data and deletion options.</p>
 <hr>
 <h2 id="printing-and-sharing">Printing and sharing</h2>
-<p><strong>Printing</strong> uses your device's built-in print service. Any printer already set
-up on your device or network will appear; there is nothing to install. Strips
+<p><strong>Printing on iPhone and iPad</strong> uses AirPrint. Any AirPrint printer
+on the same Wi-Fi network will appear; there is nothing to install. Strips
 print at the aspect ratio of the layout you chose.</p>
+<p><strong>Android:</strong> Open a still photo or strip and choose
+<strong>Print</strong>. Android's print system may need your printer manufacturer's
+print service plugin. If no printer appears, check your device's
+<strong>Settings ▸ Connected devices ▸ Printing</strong> (the path varies by
+device). <strong>Windows:</strong> Set up the printer in Windows system settings.</p>
 <p><strong>Sharing</strong> uses your device's share menu, so anywhere you can send a photo
 from your photo library, you can send one from here — messaging apps, email,
 or any other app you choose.</p>
 <hr>
 <h2 id="purchases">Purchases</h2>
+<p><strong>Android v1:</strong> All features are unlocked. There are
+<strong>no in-app purchases, subscriptions or 48-hour event passes</strong>.
+There is no purchase to restore. The paid-feature guidance below describes
+iPhone and iPad, not Android v1.</p>
+<h3>iPhone and iPad purchases</h3>
 <p class="question"><strong>What is free?</strong>
 Taking photos, strips, boomerangs and video; the Gallery; saving, sharing and
 printing; and a substantial part of the filter catalog.</p>
@@ -136,8 +172,9 @@ event pass for a single occasion.</p>
 <strong>Settings ▸ Your plan ▸ Restore purchases.</strong> If that does not do it, make sure you are
 signed in with the account you bought with, then write to us.</p>
 <p class="question"><strong>I bought it on one device — do I have to buy it again on another?</strong>
-No, as long as the other device uses the same app store account (Apple, Google
-or Microsoft). One purchase covers every device signed in with that account.
+The iPhone and iPad versions share one App Store record; one purchase covers
+both on the same Apple Account. For Windows purchases, use the Microsoft
+account you bought with and check the store's terms for device eligibility.
 Purchases do not carry over between different app stores — for example, from
 an Apple Account to a Google account — since each store handles its own
 billing.</p>
@@ -147,12 +184,25 @@ billing.</p>
 <a href="https://support.microsoft.com">support.microsoft.com</a>.</p>
 <hr>
 <h2 id="privacy">Privacy</h2>
-<p>Your photos never leave your device unless you send them. The app has no
-account and no server.</p>
-<p>The app does send anonymous usage and diagnostic data, which you can switch off
+<p>The app does not upload your photos or videos to us and has no login.
+Sharing and printing use your device's system services; gallery backup is
+controlled by your own backup settings.</p>
+<p>On Android, Firebase Crashlytics and Analytics send crash reports, app
+interactions, device diagnostics, installation identifiers and approximate
+location derived from IP, <strong>on by default</strong>. This is not anonymous
+aggregate-only data. No media, audio, camera frames, guest captions or media
+filenames are included. Android has no face detection, ads, advertising-ID
+access or location permission.</p>
+<p>On Android, iPhone and iPad, you can switch off app diagnostic collection
 in <strong>Settings ▸ Privacy ▸ Share diagnostics</strong>. The full detail — exactly what
 is collected, what is never collected, and why — is in the
 <a href="privacy.html">privacy policy</a>.</p>
+<p>Opting out or uninstalling does not erase previously collected server
+diagnostics. For deletion requests, email
+<a href="mailto:photoboothpro@outlook.com">photoboothpro@outlook.com</a>;
+installation-keyed records may not be identifiable from your email alone.
+See <a href="privacy.html#9-retention-and-deletion">retention and deletion</a>
+for the limits and process.</p>
 <hr>
 <h2 id="accessibility">Accessibility</h2>
 <p>The app supports your device's screen reader, larger text sizes, reduced
@@ -167,9 +217,13 @@ that is a defect and we will fix it.</p>
 <li>the app version (<strong>Settings ▸ About</strong> in Photo Booth Pro),</li>
 <li>what you did, what happened, and what you expected instead.</li>
 </ul>
-<p>If the app crashed, leaving automatic diagnostic sharing on in your device's
-own settings helps a crash report reach us — with no photos and nothing
-identifying you.</p>
+<p><strong>Android:</strong> The in-app <strong>Share diagnostics</strong> switch
+controls Firebase crash reporting independently of the device's system
+diagnostic-sharing setting. You can still email for support if it is off.</p>
+<p><strong>iPhone and iPad:</strong> Apple's separate diagnostic-sharing option
+is in <strong>Settings ▸ Privacy &amp; Security ▸ Analytics &amp; Improvements</strong>.
+<strong>Windows:</strong> System diagnostic sharing is managed in Windows privacy
+settings. These system controls do not replace the Android in-app switch.</p>
 <h2 id="contact">Contact</h2>
 <p><strong><a href="mailto:photoboothpro@outlook.com">photoboothpro@outlook.com</a></strong></p>
 <p>We aim to reply within two business days.</p>
@@ -179,7 +233,7 @@ identifying you.</p>
 <footer class="site-footer">
   <div class="shell footer-inner">
     <p>Photo Booth Pro &middot; Here to help.</p>
-    <div class="footer-links"><a href="privacy.html">Privacy policy</a><a href="mailto:photoboothpro@outlook.com">Email support</a><a href="#top">Back to top &uarr;</a></div>
+    <div class="footer-links"><a href="privacy.html">Privacy policy</a><a href="terms.html">Android terms</a><a href="mailto:photoboothpro@outlook.com">Email support</a><a href="#top">Back to top &uarr;</a></div>
   </div>
 </footer>
 </body>
